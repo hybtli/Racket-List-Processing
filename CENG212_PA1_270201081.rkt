@@ -101,11 +101,20 @@
 
 
 ; Apply the lambda1 function to the number 17 and display the result
-(displayln (lambda1 17))
+(let ((result (apply-lambda-with-number 17)))
+  (if (and (procedure? result)
+           (= (procedure-arity result) 0))
+      (result)
+      (print-result result)))
 
 ; Apply the lambda2 function, which only prints a message to the screen
-(lambda2)
-(newline)
+(define (apply-lambda-no-params)
+  (lambda2))
 
+(let ((result (apply-lambda-no-params)))
+  (if (and (procedure? result)
+           (= (procedure-arity result) 0))
+      (result)
+      (print-result result)))
 
 
