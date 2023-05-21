@@ -85,3 +85,7 @@ Output must be:
 ```
 - Write a statement that calls Lambda functions which takes one parameter with Number
 17 and prints the result.
+```Bash
+289
+"I am a simple lambda function which only prints to screen:)"
+```
